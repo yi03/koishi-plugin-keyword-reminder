@@ -1,6 +1,6 @@
 {
-  "name": "koishi-plugin-keywordreminder",
-  "description": "接收到关键词就私聊提醒",
+  "name": "koishi-plugin-keyword-reminder",
+  "description": "接收到关键词就私聊提醒，可屏蔽指定用户",
   "version": "0.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -9,13 +9,16 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
+  "homepage": "https://github.com/yi03/koishi-plugin-keyword-reminder",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yi03/koishi-plugin-keyword-reminder.git"
+  },
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
   "peerDependencies": {
     "koishi": "4.18.7"
   }
