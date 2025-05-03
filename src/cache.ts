@@ -42,8 +42,6 @@ export async function updateKeywordCache(ctx: Context): Promise<void> {
         // 填充全局关键词缓存
         keywordTemp['全局'] = Array.from(new Set(globalReminders.map(r => r.keyword)));
 
-        ctx.logger.info(`关键词缓存已更新 (包含 ${keywordTemp['全局']?.length || 0} 个全局关键词)`);
-
     } catch (dbError) {
         ctx.logger.error(`加载关键词缓存失败: ${dbError.message}`);
     }
