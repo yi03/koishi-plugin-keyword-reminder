@@ -11,7 +11,7 @@ export function registerManageCommands(ctx: Context): void {
         .option('global', '-g, --global 设置为全局提醒 (所有共同群聊生效)', { fallback: false })
         .usage('关键词用逗号分隔。若含逗号用 \\, 转义 (如: "你好\\,世界")。反斜杠用 \\\\。')
         .example('提醒.群提醒 项目进度,紧急通知')
-        .example('提醒.群提醒 新版本发布 -g')
+        .example('提醒.群提醒 -g 新版本发布')
         .example('提醒.群提醒 "截图\\,确认" 123456789') // 添加带群号的例子
         .action(async ({ session, options }, keywordsRaw, guildId) => {
             // ... (action 逻辑保持不变)
@@ -181,7 +181,7 @@ export function registerManageCommands(ctx: Context): void {
         .option('global', '-g, --global 删除全局提醒。私聊中不加 -g 默认也删除全局。', { fallback: false })
         .usage('关键词用逗号分隔, 转义同添加。删除时会精确匹配范围 (全局或特定群聊)。')
         .example('提醒.删除 旧项目')
-        .example('提醒.删除 老版本 -g')
+        .example('提醒.删除 -g 老版本')
         .action(async ({ session, options }, keywordsRaw, guildId) => {
             // ... (action 逻辑保持不变)
             if (!keywordsRaw) return '请输入要删除的关键词。';
